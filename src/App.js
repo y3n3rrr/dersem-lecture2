@@ -5,6 +5,7 @@ import { Layout, Menu, Breadcrumb, Icon } from 'antd'
 import { Router, Route, Switch, BrowserRouter, Link } from 'react-router-dom'
 import { Users } from './Users'
 import { Home } from './Home'
+import HomeWithHooks from './Home/HomeWithHooks'
 
 const { SubMenu } = Menu;
 const { Header, Content, Sider } = Layout;
@@ -36,7 +37,7 @@ export default class App extends Component {
                       </span>
                                         }
                                     >
-                                        <Menu.Item key="1"><Link to="/asdasdasd">Kullanici Ekle</Link></Menu.Item>
+                                        <Menu.Item key="1"><Link to="/createuser">Kullanici Ekle</Link></Menu.Item>
                                         <Menu.Item key="2">Kullanici Bilgileri</Menu.Item>
                                     </SubMenu>
                                     <SubMenu
@@ -84,7 +85,7 @@ export default class App extends Component {
                                     }}
                                 >
                                     <Route exact path="/" component={Home} />
-                                    <Route exact path="/asdasdasd" component={Users} />
+                                    <Route exact path="/createuser" component={Users} />
                                 </Content>
                             </Layout>
                         </Layout>
